@@ -52,7 +52,7 @@ function deplacer()
 
 	//ligne de code pour le déplacement
 	var Touche = window.event.keyCode;
-	var MinX = 25, MaxX = 775, MinY = 35, MaxY = 775;
+	var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
 	
 	
 	//verifier la touche  ( switch )
