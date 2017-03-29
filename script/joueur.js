@@ -6,7 +6,7 @@ function Perso(PosX, PosY, Vitesse, Diag)
 	this.Diag = Math.round(Math.sqrt(Math.pow(this.Vitesse,2)/2));
 };
 
-var MonPerso = new Perso(400, 400, 5, 0);
+var MonPerso = new Perso(400, 700, 5, 0);
 
 Perso.prototype.deplacerGauche = function() 
 {
@@ -55,15 +55,6 @@ function deplacer()
 	var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
 	
 
-	//changer img on key down
-	/*if (Touche = 37) 
-	{
-		document.getElementById("imgPers").src = "img/sprite_gif/left.gif" ;
-	}
-	if (Touche = 39) 
-	{
-		document.getElementById("imgPers").src = "img/sprite_gif/right.gif" ;
-	}*/
 
 	//verifier la touche  ( switch )
 
