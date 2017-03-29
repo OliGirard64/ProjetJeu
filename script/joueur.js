@@ -54,18 +54,32 @@ function deplacer()
 	var Touche = window.event.keyCode;
 	var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
 	
-	
+
+	//changer img on key down
+	/*if (Touche = 37) 
+	{
+		document.getElementById("imgPers").src = "img/sprite_gif/left.gif" ;
+	}
+	if (Touche = 39) 
+	{
+		document.getElementById("imgPers").src = "img/sprite_gif/right.gif" ;
+	}*/
+
 	//verifier la touche  ( switch )
 
 	switch (Touche)
 	{
 		case 37: MonPerso.deplacerGauche();
+				document.getElementById("imgPers").src = "img/sprite_gif/left.gif" ;
 				break;
 		case 39: MonPerso.deplacerDroite();
+				document.getElementById("imgPers").src = "img/sprite_gif/right.gif" ;
 				break;
 		case 38: MonPerso.deplacerHaut();
+				document.getElementById("imgPers").src = "img/sprite_gif/up.gif" ;
 				break;
 		case 40: MonPerso.deplacerBas();
+				document.getElementById("imgPers").src = "img/sprite_gif/down.gif" ;
 				break;
 		case 103: MonPerso.deplacerHautGauche();
 				break;
