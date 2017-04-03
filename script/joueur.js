@@ -50,8 +50,6 @@ Perso.prototype.deplacerBasDroite = function()
 function deplacer()
 {
 
-
-
 	//ligne de code pour le déplacement
 	var Touche = window.event.keyCode;
 	var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
@@ -84,10 +82,6 @@ function deplacer()
 				break;
 	}
 
-	if (Touche.keydown) 
-	{
-		
-	}
 
 	//verifier si on touche un mur
 
@@ -116,6 +110,8 @@ function deplacer()
 	imgPers.style.top = MonPerso.PosY + "px";
 
 }
+
+
 
 
 
