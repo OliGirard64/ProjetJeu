@@ -6,7 +6,7 @@ function Perso(PosX, PosY, Vitesse, Diag)
 	this.Diag = Math.round(Math.sqrt(Math.pow(this.Vitesse,2)/2));
 };
 
-var MonPerso = new Perso(400, 700, 15, 0);
+var MonPerso = new Perso(400, 700, 40, 0);
 
 Perso.prototype.deplacerGauche = function() 
 {
@@ -25,7 +25,7 @@ Perso.prototype.deplacerBas = function()
 	this.PosY = this.PosY + this.Vitesse;
 }
 
-Perso.prototype.deplacerHautGauche = function() 
+/*Perso.prototype.deplacerHautGauche = function() 
 {
 	this.PosX = this.PosX - this.Diag;
 	this.PosY = this.PosY - this.Diag;
@@ -44,7 +44,7 @@ Perso.prototype.deplacerBasDroite = function()
 {
 	this.PosX = this.PosX + this.Diag;
 	this.PosY = this.PosY + this.Diag;
-}
+}*/
 
 
 function deplacer()
@@ -52,7 +52,7 @@ function deplacer()
 
 	//ligne de code pour le déplacement
 	var Touche = window.event.keyCode;
-	var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
+	var MinX = 35, MaxX = 735, MinY = 25, MaxY = 745;
 	
 
 
@@ -61,17 +61,17 @@ function deplacer()
 	switch (Touche)
 	{
 		case 37: MonPerso.deplacerGauche();
-				document.getElementById("imgPers").src = "img/sprite_gif/left.gif" ;
+				/*document.getElementById("imgPers").src = "img/sprite_gif/left.gif" ;*/
 				break;
 		case 39: MonPerso.deplacerDroite();
-				document.getElementById("imgPers").src = "img/sprite_gif/right.gif" ;
+				/*document.getElementById("imgPers").src = "img/sprite_gif/right.gif" ;*/
 				break;
 		case 38: MonPerso.deplacerHaut();
-				document.getElementById("imgPers").src = "img/sprite_gif/up.gif" ;
+				/*document.getElementById("imgPers").src = "img/sprite_gif/up.gif" ;*/
 				break;
 		case 40: MonPerso.deplacerBas();
-				document.getElementById("imgPers").src = "img/sprite_gif/down.gif" ;
-				break;
+				/*document.getElementById("imgPers").src = "img/sprite_gif/down.gif" ;*/
+			/*	break;
 		case 103: MonPerso.deplacerHautGauche();
 				break;
 		case 105: MonPerso.deplacerHautDroite();
@@ -79,7 +79,7 @@ function deplacer()
 		case 97: MonPerso.deplacerBasGauche();
 				break;
 		case 99: MonPerso.deplacerBasDroite();
-				break;
+				break;*/
 	}
 
 

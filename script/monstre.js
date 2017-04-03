@@ -5,7 +5,7 @@ function Monstre(PosX, PosY, Vitesse)
 	this.Vitesse = Vitesse;
 }
 
-var Octo = new Monstre(400, 100, 5)
+var Octo = new Monstre(400, 100, 30)
 
 Monstre.prototype.deplacerGauche = function() 
 {
@@ -29,22 +29,45 @@ Monstre.prototype.deplacerBas = function()
 
 function deplacerMonstre()
 {
+	var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
 	
-		random = genererNbAle(1,4)
+	random = genererNbAle(1,8)
 		
-		switch (random)
-		{
-			case 1: Octo.deplacerGauche();
+	switch (random)
+	{
+		case 1,3: Octo.deplacerGauche();
+				
+				break;
+		case 2,4: Octo.deplacerDroite();
 					
-					break;
-			case 2: Octo.deplacerDroite();
+				break;
+		case 3,5: Octo.deplacerHaut();
 					
-					break;
-			case 3: Octo.deplacerHaut();
-					
-					break;
-			case 4: Octo.deplacerBas();		
-		}
+				break;
+		case 4,6,8: Octo.deplacerBas();		
+	}
+
+
+
+	if (Octo.PosX <= MinX ) 
+	{
+		Octo.PosX = MinX
+	}
+
+	if (Octo.PosX >= MaxX) 
+	{
+		Octo.PosX = MaxX
+	}
+
+	if (Octo.PosY <= MinY ) 
+	{
+		Octo.PosY = MinY
+	}
+
+	if (Octo.PosY >= MaxY ) 
+	{
+		Octo.PosY = MaxY
+	}	
 
 	var imgMons = document.getElementById("imgMons");
 	imgMons.style.left = Octo.PosX + "px";
