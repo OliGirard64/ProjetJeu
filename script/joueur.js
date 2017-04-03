@@ -6,7 +6,7 @@ function Perso(PosX, PosY, Vitesse, Diag)
 	this.Diag = Math.round(Math.sqrt(Math.pow(this.Vitesse,2)/2));
 };
 
-var MonPerso = new Perso(400, 700, 40, 0);
+var MonPerso = new Perso(389, 709, 40, 0);
 
 Perso.prototype.deplacerGauche = function() 
 {
@@ -71,14 +71,14 @@ function deplacer()
 				break;
 		case 40: MonPerso.deplacerBas();
 				/*document.getElementById("imgPers").src = "img/sprite_gif/down.gif" ;*/
-			/*	break;
-		case 103: MonPerso.deplacerHautGauche();
 				break;
-		case 105: MonPerso.deplacerHautDroite();
+		/*case 37:  Octo.deplacerAll();
 				break;
-		case 97: MonPerso.deplacerBasGauche();
+		case 39:  Octo.deplacerAll();
 				break;
-		case 99: MonPerso.deplacerBasDroite();
+		case 38:  Octo.deplacerAll();
+				break;
+		case 40:  Octo.deplacerAll();
 				break;*/
 	}
 
