@@ -6,7 +6,7 @@ function Perso(PosX, PosY, Vitesse, Diag)
 	this.Diag = Math.round(Math.sqrt(Math.pow(this.Vitesse,2)/2));
 };
 
-var MonPerso = new Perso(400, 700, 5, 0);
+var MonPerso = new Perso(400, 700, 15, 0);
 
 Perso.prototype.deplacerGauche = function() 
 {
