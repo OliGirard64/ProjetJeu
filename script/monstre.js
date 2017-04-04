@@ -24,6 +24,9 @@ Monstre.prototype.deplacerBas = function()
 	this.PosY = this.PosY + this.Vitesse;
 }
 
+
+
+
 function deplacerMonstre()
 {
 	
@@ -43,16 +46,34 @@ function deplacerMonstre()
 			case 4: Octo.deplacerBas();		
 		}
 
-	
+	var imgMons = document.getElementById("imgMons");
+	imgMons.style.left = Octo.PosX + "px";
+	imgMons.style.top = Octo.PosY + "px";
 
 }
+
+function intervalDep()
+{
+	setInterval(deplacerMonstre(), 1000);
+}
+
 
 function genererNbAle(Min, Max)
 {
 	return Math.floor(Math.random()*(Max - Min + 1)+Min);
 }
 
-//Exemple deplacer le personnage en X Y
-	var imgMons = document.getElementById("imgMons");
-	imgMons.style.left = Octo.PosX + "px";
-	imgMons.style.top = Octo.PosY + "px";
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -50,6 +50,8 @@ Perso.prototype.deplacerBasDroite = function()
 function deplacer()
 {
 
+
+
 	//ligne de code pour le déplacement
 	var Touche = window.event.keyCode;
 	var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
@@ -82,6 +84,11 @@ function deplacer()
 				break;
 	}
 
+	if (Touche.keydown) 
+	{
+		
+	}
+
 	//verifier si on touche un mur
 
 	if (MonPerso.PosX <= MinX ) 
@@ -104,9 +111,16 @@ function deplacer()
 		MonPerso.PosY = MaxY
 	}
 	
-	//Exemple deplacer le personnage en X Y
 	var imgPers = document.getElementById("imgPers");
 	imgPers.style.left = MonPerso.PosX + "px";
 	imgPers.style.top = MonPerso.PosY + "px";
 
 }
+
+
+
+
+
+
+
+
