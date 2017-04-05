@@ -6,7 +6,7 @@ function Perso(PosX, PosY, Vitesse, Diag)
 	this.Diag = Math.round(Math.sqrt(Math.pow(this.Vitesse,2)/2));
 };
 
-var MonPerso = new Perso(389, 709, 40, 0);
+var MonPerso = new Perso(389, 729, 40, 0);
 
 Perso.prototype.deplacerGauche = function() 
 {
@@ -46,12 +46,13 @@ Perso.prototype.deplacerBasDroite = function()
 	this.PosY = this.PosY + this.Diag;
 }*/
 
+var derniereDirection = 0; 
 
 function deplacer()
 {
 
 	//ligne de code pour le déplacement
-	var Touche = window.event.keyCode;
+	var Touche = window.event.keyCode;	
 	var MinX = 35, MaxX = 735, MinY = 25, MaxY = 745;
 	
 
@@ -60,26 +61,23 @@ function deplacer()
 
 	switch (Touche)
 	{
-		case 37: MonPerso.deplacerGauche();
-				/*document.getElementById("imgPers").src = "img/sprite_gif/left.gif" ;*/
+		case 37:MonPerso.deplacerGauche();
+				derniereDirection = Touche;
+				deplacerMonstre();
 				break;
-		case 39: MonPerso.deplacerDroite();
-				/*document.getElementById("imgPers").src = "img/sprite_gif/right.gif" ;*/
+		case 39:MonPerso.deplacerDroite();
+				derniereDirection = Touche;
+				deplacerMonstre();
 				break;
-		case 38: MonPerso.deplacerHaut();
-				/*document.getElementById("imgPers").src = "img/sprite_gif/up.gif" ;*/
+		case 38:MonPerso.deplacerHaut();
+				derniereDirection = Touche;
+				deplacerMonstre();
 				break;
-		case 40: MonPerso.deplacerBas();
-				/*document.getElementById("imgPers").src = "img/sprite_gif/down.gif" ;*/
+		case 40:MonPerso.deplacerBas();	
+				derniereDirection = Touche;
+				deplacerMonstre();			
 				break;
-		/*case 37:  Octo.deplacerAll();
-				break;
-		case 39:  Octo.deplacerAll();
-				break;
-		case 38:  Octo.deplacerAll();
-				break;
-		case 40:  Octo.deplacerAll();
-				break;*/
+		
 	}
 
 

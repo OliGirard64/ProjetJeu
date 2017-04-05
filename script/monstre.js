@@ -48,8 +48,7 @@ function deplacerMonstre()
 					Octo.deplacerHaut();					
 					break;
 			case 2:
-			case 6:
-			case 4: 
+			case 6: 
 					Octo.deplacerBas();		
 		}
 	
@@ -79,7 +78,7 @@ function deplacerMonstre()
 	imgMons.style.left = Octo.PosX + "px";
 	imgMons.style.top = Octo.PosY + "px";
 
-	console.log(random)
+
 
 }
 

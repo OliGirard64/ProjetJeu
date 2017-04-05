@@ -5,10 +5,11 @@ body
 }
 canvas
 {
-	width: 800px;
-	height: 800px;
+	width: 840px;
+	height: 840px;
 	border: solid 1px;
-	background-image:url(../img/map.png); map.png
+	background-image:url(../img/map.png);
+
 }
 /*---------------------DIVS---------------------*/
 
