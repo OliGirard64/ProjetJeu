@@ -33,9 +33,8 @@ function deplacerMonstre()
 	random = genererNbAle(1,8)
 		
 
-	if (Touche == 37 | 38 | 39 | 40 ) 		
-	{
-			switch (random)
+	
+		switch (random)
 		{
 			case 1:
 	   		case 8: 
@@ -53,7 +52,7 @@ function deplacerMonstre()
 			case 4: 
 					Octo.deplacerBas();		
 		}
-	}
+	
 
 
 	if (Octo.PosX <= MinX ) 
