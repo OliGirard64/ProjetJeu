@@ -2,9 +2,14 @@
 <html>
 <head>
 	<title>MENU PRINCIPAL</title>
+	<link rel="stylesheet" type="text/css" href="style/style_menu.css">
+
 <script type="text/javascript">
 	
-
+	function fermeFenetre() 
+	{
+  		window.close();
+	}
 
 </script>
 
@@ -12,10 +17,16 @@
 </head>
 <body>
 
-<a href="index.html"><img src="img/menu/bouton_jouer.png"></a>
-<a href="" onclick=""><img src="img/menu/bouton_option.png"></a>
-<a href="" onclick="javascript:window.close()"><img src="img/menu/bouton_quitter.png"></a>
+<div>
+	<p class="jouer_align">
+		<a href="index.html"><img src="img/menu/bouton_jouer.png"></a>
+	</p>
 
+	<p class="autre_align">
+		<a href="" onclick=""><img src="img/menu/bouton_option.png"></a>
+		<a href=""><img onclick="fermeFenetre()" src="img/menu/bouton_quitter.png"></a>
+	</p>
+</div>
 
 </body>
 </html>
