@@ -5,7 +5,7 @@ function Monstre(PosX, PosY, Vitesse)
 	this.Vitesse = Vitesse;
 }
 
-var Octo = new Monstre(389, 109, 40)
+var Octo = new Monstre(410, 130, 40)
 var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
 Monstre.prototype.deplacerGauche = function() 
 {
@@ -28,7 +28,7 @@ Monstre.prototype.deplacerBas = function()
 function deplacerMonstre()
 {
 	var Touche = window.event.keyCode;
-	var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
+	var MinX = 50, MaxX = 770, MinY = 50, MaxY = 770;
 	
 	random = genererNbAle(1,8)
 		

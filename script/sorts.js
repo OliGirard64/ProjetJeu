@@ -29,7 +29,7 @@ function sort1()
 		/*haut*/		
 		case 38: direction = 2;
 				break;
-		/*droite*/		
+		/*droite*/		1
 		case 39: direction = 3;			
 				break;
 		/*bas*/		
@@ -41,12 +41,20 @@ function sort1()
 	{
 		
 		case 1: document.getElementById("imgSort1").style.display = "block";
+				document.getElementById("imgSort1").style.top = MonPerso.PosY + "px";
+				document.getElementById("imgSort1").style.left = MonPerso.PosX - 40 + "px";
 				break;		
 		case 2: document.getElementById("imgSort1").style.display = "block";
+				document.getElementById("imgSort1").style.top = MonPerso.PosY - 40 + "px";
+				document.getElementById("imgSort1").style.left = MonPerso.PosX + "px";
 				break;		
-		case 3: document.getElementById("imgSort1").style.display = "block";			
+		case 3: document.getElementById("imgSort1").style.display = "block";
+				document.getElementById("imgSort1").style.top = MonPerso.PosY + "px";
+				document.getElementById("imgSort1").style.left = MonPerso.PosX + 40 + "px";			
 				break;		
 		case 4: document.getElementById("imgSort1").style.display = "block";
+				document.getElementById("imgSort1").style.top = MonPerso.PosY + 40 + "px";
+				document.getElementById("imgSort1").style.left = MonPerso.PosX + "px";	
 				break;
 	}
 

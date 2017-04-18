@@ -6,7 +6,7 @@ function Perso(PosX, PosY, Vitesse, Diag)
 	this.Diag = Math.round(Math.sqrt(Math.pow(this.Vitesse,2)/2));
 };
 
-var MonPerso = new Perso(389, 729, 40, 0);
+var MonPerso = new Perso(410, 730, 40, 0);
 
 Perso.prototype.deplacerGauche = function() 
 {
@@ -53,7 +53,7 @@ function deplacer()
 
 	//ligne de code pour le déplacement
 	var Touche = window.event.keyCode;	
-	var MinX = 35, MaxX = 735, MinY = 25, MaxY = 745;
+	var MinX = 50, MaxX = 770, MinY = 50, MaxY = 770;
 	
 
 
