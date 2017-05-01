@@ -1,4 +1,22 @@
+var Att = new Audio('sons/attaque.wav');
+var Ya = new Audio('sons/ya.wav');
+var Ya2 = new Audio('sons/ya2.wav');
+var Ya3 = new Audio('sons/ya3.wav');
+var Tele = new Audio('sons/teleport.wav');
+var Feu = new Audio('sons/feu.wav');
+var Hurt = new Audio("sons/hurt.wav");
+var Mort = new Audio("sons/Mort.wav")
 
+
+function JouerSonMort()
+{
+    Mort.play();
+}
+
+function JouerSonHurt()
+{
+    Hurt.play();
+}
 function JouerSonTele()
 {
 	Tele.play();

@@ -1,10 +1,5 @@
 
-var Att = new Audio('sons/attaque.wav');
-var Ya = new Audio('sons/ya.wav');
-var Ya2 = new Audio('sons/ya2.wav');
-var Ya3 = new Audio('sons/ya3.wav');
-var Tele = new Audio('sons/teleport.wav');
-var Feu = new Audio('sons/feu.wav');
+
 
 function gererSort()
 {
@@ -61,7 +56,9 @@ function sort1()
 				document.getElementById("EpeeUp").style.left = MonPerso.PosX + "px";
 				setTimeout(cacherSort, 150);
 				break;		
-		case 3: JouerSonAtt();
+		case 3: console.log(Octo.PosY +"px")
+				console.log(document.getElementById("EpeeDroite").style.top)
+				JouerSonAtt();
 				document.getElementById("EpeeDroite").style.display = "block";
 				document.getElementById("EpeeDroite").style.top = MonPerso.PosY + "px";
 				document.getElementById("EpeeDroite").style.left = MonPerso.PosX + 40 + "px";	

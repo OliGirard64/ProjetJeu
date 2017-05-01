@@ -26,6 +26,10 @@ Monstre.prototype.deplacerBas = function()
 }
 
 
+
+
+var CptAtt = 0;
+
 function deplacerMonstre()
 {
 	var Touche = window.event.keyCode;
@@ -80,6 +84,24 @@ function deplacerMonstre()
 	imgMons.style.top = Octo.PosY + "px";
 
 
+
+
+	if (Octo.PosY == MonPerso.PosY && Octo.PosX == MonPerso.PosX) 
+	{
+		CptAtt ++;
+		JouerSonHurt();
+	}
+
+	if (CptAtt == 1) 
+	{
+		JouerSonMort();
+		document.getElementById("gameover").style.display = "block"
+	}
+
+	if (document.getElementById("EpeeDroite").style.top == Octo.PosY +"px" && document.getElementById("EpeeDroite").style.left == Octo.PosX +"px") 
+	{
+		alert("attaque")
+	}
 
 }
 
