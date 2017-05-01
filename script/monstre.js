@@ -96,8 +96,18 @@ function deplacerMonstre()
 
 	if (CptAtt == 1) 
 	{
-		JouerSonMort();
-		document.getElementById("gameover").style.display = "block"
+		document.getElementById("coeur_link").src = "img/coeur/link_2.png";
+	}
+
+	else if (CptAtt == 2) 
+	{
+		document.getElementById("coeur_link").src = "img/coeur/link_1.png";
+	}
+	else if(CptAtt == 3)
+	{
+		document.getElementById("coeur_link").src = "img/coeur/vide.png";
+		document.getElementById("gameover").style.display = "block";
+		JouerSonMort()
 	}
 
 

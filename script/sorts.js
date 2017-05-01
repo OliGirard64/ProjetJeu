@@ -157,18 +157,47 @@ function sort2()
 
 }
 
+
+
+var PosDiffX = 0;
+var PosDiffY = 0;
+
 function sort3()
 {
 	
 	JouerSonFeu();
 		 
 	document.getElementById("feu").style.display = "block";	
-	document.getElementById("feu").style.top = MonPerso.PosY-40+"px";
-	document.getElementById("feu").style.left = MonPerso.PosX-40+"px";
+	document.getElementById("feu").style.top = MonPerso.PosY - 40 + "px";
+	document.getElementById("feu").style.left = MonPerso.PosX - 40 + "px";
 	setTimeout(cacherSort, 300);
-				
-	
 
+	PosDiffX = MonPerso.PosX - Octo.PosX;
+	PosDiffY = MonPerso.PosY - Octo.PosY  
+
+	console.log(PosDiffX)
+	console.log(PosDiffY)
+
+
+
+	if (PosDiffX <= 40 && PosDiffY <= 40) 
+	{
+		CptVieMonstre ++;
+	}
+
+	if (CptVieMonstre == 1) 
+		{
+			document.getElementById("coeur_monstre").src = "img/coeur/monstre_2.png"
+		}
+		else if(CptVieMonstre == 2)
+		{
+			document.getElementById("coeur_monstre").src = "img/coeur/monstre_1.png";
+		}
+		else if(CptVieMonstre == 3)
+		{
+			document.getElementById("coeur_monstre").src = "img/coeur/vide.png";
+			document.getElementById("victoire").style.display = "block";
+		}
 
 }
 
