@@ -1,5 +1,6 @@
 
-
+var PosEpeeY = 0;
+var PosEpeeX = 0;
 
 function gererSort()
 {
@@ -19,6 +20,7 @@ function gererSort()
 }
 
 var direction = 0;
+var CptVieMonstre = 0;
 
 function sort1()
 {
@@ -47,6 +49,8 @@ function sort1()
 				document.getElementById("EpeeGauche").style.display = "block";	
 				document.getElementById("EpeeGauche").style.top = MonPerso.PosY + "px";
 				document.getElementById("EpeeGauche").style.left = MonPerso.PosX - 40 + "px";
+				PosEpeeY = MonPerso.PosY;
+				PosEpeeX = MonPerso.PosX - 40;
 				setTimeout(cacherSort, 150);
 				break;	
 
@@ -54,6 +58,8 @@ function sort1()
 				document.getElementById("EpeeUp").style.display = "block";
 				document.getElementById("EpeeUp").style.top = MonPerso.PosY - 40 + "px";
 				document.getElementById("EpeeUp").style.left = MonPerso.PosX + "px";
+				PosEpeeY = MonPerso.PosY - 40;
+				PosEpeeX = MonPerso.PosX;
 				setTimeout(cacherSort, 150);
 				break;		
 		case 3: console.log(Octo.PosY +"px")
@@ -61,18 +67,40 @@ function sort1()
 				JouerSonAtt();
 				document.getElementById("EpeeDroite").style.display = "block";
 				document.getElementById("EpeeDroite").style.top = MonPerso.PosY + "px";
-				document.getElementById("EpeeDroite").style.left = MonPerso.PosX + 40 + "px";	
+				document.getElementById("EpeeDroite").style.left = MonPerso.PosX + 40 + "px";
+				PosEpeeX = MonPerso.PosX + 40;
+				PosEpeeY = MonPerso.PosY;
 				setTimeout(cacherSort, 150);		
 				break;		
 		case 4: JouerSonAtt();
 				document.getElementById("EpeeDown").style.display = "block";
 				document.getElementById("EpeeDown").style.top = MonPerso.PosY + 40 + "px";
 				document.getElementById("EpeeDown").style.left = MonPerso.PosX + "px";	
+				PosEpeeY = MonPerso.PosY + 40;
+				PosEpeeX = MonPerso.PosX;	
 				setTimeout(cacherSort, 150);
 				break;
 	}
 
+		if (PosEpeeX == Octo.PosX && PosEpeeY == Octo.PosY) 
+		{
+			CptVieMonstre ++;
+		}
 
+
+		if (CptVieMonstre == 1) 
+		{
+			document.getElementById("coeur_monstre").src = "img/coeur/monstre_2.png"
+		}
+		else if(CptVieMonstre == 2)
+		{
+			document.getElementById("coeur_monstre").src = "img/coeur/monstre_1.png";
+		}
+		else if(CptVieMonstre == 3)
+		{
+			document.getElementById("coeur_monstre").src = "img/coeur/vide.png";
+			document.getElementById("victoire").style.display = "block";
+		}
 
 }
 

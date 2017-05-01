@@ -29,6 +29,8 @@ Monstre.prototype.deplacerBas = function()
 
 
 var CptAtt = 0;
+var PosEpeeX = 0;
+var PosEpeeY = 0;
 
 function deplacerMonstre()
 {
@@ -98,10 +100,7 @@ function deplacerMonstre()
 		document.getElementById("gameover").style.display = "block"
 	}
 
-	if (document.getElementById("EpeeDroite").style.top == Octo.PosY +"px" && document.getElementById("EpeeDroite").style.left == Octo.PosX +"px") 
-	{
-		alert("attaque")
-	}
+
 
 }
 
