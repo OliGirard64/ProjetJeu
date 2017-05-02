@@ -7,12 +7,13 @@ function Monstre(PosX, PosY, Vitesse)
 
 var Octo = new Monstre(410, 130, 40)
 var MinX = 35, MaxX = 755, MinY = 25, MaxY = 745;
+
 Monstre.prototype.deplacerGauche = function() 
 {
 	this.PosX = this.PosX - this.Vitesse;
 }
 Monstre.prototype.deplacerDroite = function() 
- 
+{ 
 	this.PosX = this.PosX + this.Vitesse;
 }
 Monstre.prototype.deplacerHaut = function() 
@@ -81,6 +82,7 @@ function deplacerMonstre()
 
 
 }
+
 
 
 
