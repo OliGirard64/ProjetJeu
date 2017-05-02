@@ -16,9 +16,9 @@ function gererSort()
 		case 50: sort2();
 				break;
 		/*case 51: sort3();			
-				break;
-		case 52: sort4();
 				break;*/
+		case 52: sort4();
+				break;
 	}
 }
 
@@ -131,6 +131,23 @@ function sort2()
 
 }
 
+function sort4()
+{
+	
+	//JouerSonFeu();
+		 
+	document.getElementById("feu").style.display = "block";	
+	document.getElementById("feu").style.top = MonPerso.PosY-40+"px";
+	document.getElementById("feu").style.left = MonPerso.PosX-40+"px";
+	setTimeout(cacherSort, 300);
+				
+	
+
+
+}
+
+
+
 
 function cacherSort()
 {
@@ -138,6 +155,7 @@ function cacherSort()
 	document.getElementById("EpeeGauche").style.display = "none";
 	document.getElementById("EpeeDroite").style.display = "none";
 	document.getElementById("EpeeDown").style.display = "none";
+	document.getElementById("feu").style.display = "none";
 }
 
 
