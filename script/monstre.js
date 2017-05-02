@@ -84,7 +84,6 @@ function deplacerMonstre()
 
 
 
-
 function intervalDep()
 {
 	setInterval(deplacerMonstre(), 1000);

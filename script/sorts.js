@@ -49,6 +49,7 @@ function sort1()
 	{
 		
 		case 1: JouerSonAtt();
+
 				document.getElementById("EpeeGauche").style.display = "block";	
 				document.getElementById("EpeeGauche").style.top = MonPerso.PosY + "px";
 				document.getElementById("EpeeGauche").style.left = MonPerso.PosX - 40 + "px";
@@ -56,6 +57,7 @@ function sort1()
 				break;	
 
 		case 2: JouerSonAtt();
+
 				document.getElementById("EpeeUp").style.display = "block";
 				document.getElementById("EpeeUp").style.top = MonPerso.PosY - 40 + "px";
 				document.getElementById("EpeeUp").style.left = MonPerso.PosX + "px";
@@ -71,8 +73,7 @@ function sort1()
 				document.getElementById("EpeeDown").style.display = "block";
 				document.getElementById("EpeeDown").style.top = MonPerso.PosY + 40 + "px";
 				document.getElementById("EpeeDown").style.left = MonPerso.PosX + "px";	
-				setTimeout(cacherSort, 150);
-				break;
+
 	}
 
 
@@ -152,11 +153,17 @@ function sort3()
 
 function cacherSort()
 {
+
 	document.getElementById("EpeeUp").style.display = "none";
 	document.getElementById("EpeeGauche").style.display = "none";
 	document.getElementById("EpeeDroite").style.display = "none";
 	document.getElementById("EpeeDown").style.display = "none";
 	document.getElementById("feu").style.display = "none";
+
+	document.getElementById("feu").style.display = "none";
+
+
+
 }
 
 
