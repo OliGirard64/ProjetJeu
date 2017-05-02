@@ -4,6 +4,11 @@ function JouerSonTele()
 	Tele.play();
 }
 
+function JouerSonFeu()
+{
+	Feu.play();
+}
+
 function JouerSonAtt() 
 { 
 

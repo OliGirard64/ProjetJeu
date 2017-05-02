@@ -4,6 +4,7 @@ var Ya = new Audio('sons/ya.wav');
 var Ya2 = new Audio('sons/ya2.wav');
 var Ya3 = new Audio('sons/ya3.wav');
 var Tele = new Audio('sons/teleport.wav');
+var Feu = new Audio('sons/feu.wav');
 
 function gererSort()
 {
@@ -15,10 +16,10 @@ function gererSort()
 				break;
 		case 50: sort2();
 				break;
-		/*case 51: sort3();			
-				break;*/
-		case 52: sort4();
+		case 51: sort3();			
 				break;
+		/*case 52: sort4();
+				break;*/
 	}
 }
 
@@ -131,10 +132,10 @@ function sort2()
 
 }
 
-function sort4()
+function sort3()
 {
 	
-	//JouerSonFeu();
+	JouerSonFeu();
 		 
 	document.getElementById("feu").style.display = "block";	
 	document.getElementById("feu").style.top = MonPerso.PosY-40+"px";

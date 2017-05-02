@@ -12,7 +12,7 @@ Monstre.prototype.deplacerGauche = function()
 	this.PosX = this.PosX - this.Vitesse;
 }
 Monstre.prototype.deplacerDroite = function() 
-{
+ 
 	this.PosX = this.PosX + this.Vitesse;
 }
 Monstre.prototype.deplacerHaut = function() 
