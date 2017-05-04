@@ -107,7 +107,9 @@ function deplacerMonstre()
 	{
 		document.getElementById("coeur_link").src = "img/coeur/vide.png";
 		document.getElementById("gameover").style.display = "block";
-		JouerSonMort()
+		StopSonJeu();
+		JouerSonMort();
+		JouerSonOver();
 	}
 
 

@@ -100,6 +100,8 @@ function sort1()
 		{
 			document.getElementById("coeur_monstre").src = "img/coeur/vide.png";
 			document.getElementById("victoire").style.display = "block";
+			StopSonJeu();
+			JouerSonVictoire();
 		}
 
 }
@@ -172,8 +174,10 @@ function sort3()
 	document.getElementById("feu").style.left = MonPerso.PosX - 40 + "px";
 	setTimeout(cacherSort, 300);
 
-	PosDiffX = MonPerso.PosX - Octo.PosX;
-	PosDiffY = MonPerso.PosY - Octo.PosY  
+	PosDiffX = Math.abs(MonPerso.PosX - Octo.PosX);
+	PosDiffY = Math.abs(MonPerso.PosY - Octo.PosY);  
+
+
 
 	console.log(PosDiffX)
 	console.log(PosDiffY)
@@ -197,6 +201,8 @@ function sort3()
 		{
 			document.getElementById("coeur_monstre").src = "img/coeur/vide.png";
 			document.getElementById("victoire").style.display = "block";
+			StopSonJeu();
+			JouerSonVictoire();
 		}
 
 }
