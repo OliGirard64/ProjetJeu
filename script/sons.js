@@ -1,6 +1,6 @@
 var Start = new Audio('sons/start.wav');
 var Att = new Audio('sons/attaque.wav');
-var Ya = new Audio('sons/ya.wav');
+var Ya1 = new Audio('sons/ya.wav');
 var Ya2 = new Audio('sons/ya2.wav');
 var Ya3 = new Audio('sons/ya3.wav');
 var Tele = new Audio('sons/teleport.wav');
@@ -54,7 +54,7 @@ function JouerSonAtt()
 
     switch(NbAle)
     {
-    	case 1: Ya.play();
+    	case 1: Ya1.play();
     		break;
     	case 2: Ya2.play();
     		break;

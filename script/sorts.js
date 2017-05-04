@@ -62,9 +62,7 @@ function sort1()
 				PosEpeeX = MonPerso.PosX;
 				setTimeout(cacherSort, 150);
 				break;		
-		case 3: console.log(Octo.PosY +"px")
-				console.log(document.getElementById("EpeeDroite").style.top)
-				JouerSonAtt();
+		case 3: JouerSonAtt();
 				document.getElementById("EpeeDroite").style.display = "block";
 				document.getElementById("EpeeDroite").style.top = MonPerso.PosY + "px";
 				document.getElementById("EpeeDroite").style.left = MonPerso.PosX + 40 + "px";
@@ -99,6 +97,7 @@ function sort1()
 		else if(CptVieMonstre == 3)
 		{
 			document.getElementById("coeur_monstre").src = "img/coeur/vide.png";
+			document.getElementById("imgMons").src = "img/sprite_gif/m_mort.gif";
 			document.getElementById("victoire").style.display = "block";
 			StopSonJeu();
 			JouerSonVictoire();
@@ -200,6 +199,7 @@ function sort3()
 		else if(CptVieMonstre == 3)
 		{
 			document.getElementById("coeur_monstre").src = "img/coeur/vide.png";
+			document.getElementById("imgMons").src = "img/sprite_gif/m_mort.gif";
 			document.getElementById("victoire").style.display = "block";
 			StopSonJeu();
 			JouerSonVictoire();
